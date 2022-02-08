@@ -1,8 +1,10 @@
 ---
 title: "Homework 2 Problem 2"
-author: "Jacob Townsley"
+author: "Jacob Townsley, Joseph Trembley"
 date: "2/8/2022"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r}
@@ -11,6 +13,7 @@ data <- read.csv('https://yumouqiu.github.io/DS202-Spring2022/Lecture1_collabora
 usa <- data[data$country == 'United States',]
 canada <- data[data$country == 'Canada',]
 canada[canada$year == 1957,]$lifeExp = 69.96
-ggplot(aes(x = year, y = lifeExp, colour = country), data = usa) + geom_line() + geom_line(data = canada)
+aus <- data[data$country == 'Australia',]
+ggplot(aes(x = year, y = lifeExp, colour = country), data = usa) + geom_line() + geom_line(data = canada) + geom_line(data = aus)
 ```
 
