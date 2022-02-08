@@ -1,0 +1,16 @@
+---
+title: "Homework 2 Problem 2"
+author: "Jacob Townsley"
+date: "2/8/2022"
+output: pdf_document
+---
+
+```{r}
+library(ggplot2)
+data <- read.csv('https://yumouqiu.github.io/DS202-Spring2022/Lecture1_collaborative-environment/data/gapminder-5060.csv')
+usa <- data[data$country == 'United States',]
+canada <- data[data$country == 'Canada',]
+canada[canada$year == 1957,]$lifeExp = 69.96
+ggplot(aes(x = year, y = lifeExp, colour = country), data = usa) + geom_line() + geom_line(data = canada)
+```
+
