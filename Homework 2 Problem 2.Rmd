@@ -7,6 +7,9 @@ output:
     df_print: paged
 ---
 
+Github repositories: https://github.com/jtownsley25, https://github.com/trembleyjr
+
+
 ```{r}
 library(ggplot2)
 data <- read.csv('https://yumouqiu.github.io/DS202-Spring2022/Lecture1_collaborative-environment/data/gapminder-5060.csv')
